@@ -16,7 +16,11 @@ a = QApplication(sys.argv)
 w = QWidget()
  
 w.resize(320, 240)  # изменить размеры виджета
-w.setWindowTitle("Моё первое окно на PyQt!")  # установить заголовок
+w.setWindowTitle(u"Моё первое окно на PyQt!")  # установить заголовок
+label = QLabel(u"""<center><h1>Привет мир!</h1></center>
+        <h2>Это <i>простейший пример</i> для <font color=red>PyQt4</font>.</h2>""")
+label.show()
+
 w.show()  # отобразить окно на экране
  
 sys.exit(a.exec_())  # запуск основного цикла приложения
